@@ -1,0 +1,1039 @@
+import java.util.Date;
+import java.util.Random;
+import java.util.Scanner;
+
+public class final_project {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("soo geli Dial:");
+        String evc_plus = input.nextLine();
+        // checking evc plus
+        if (evc_plus.equals("*770#")) {
+            System.out.println("-EVCPLUS-\n fadlan geli pin_kaga (Enter_pin :)");
+            int pin = input.nextInt();
+            // checking pin
+            if (pin == 2222)
+                System.out.println();
+            System.out.println(" EVCPLUS ");
+            System.out.println("    1. Itus Haraaga");
+            System.out.println("    2. Kaarka Hadalka");
+            System.out.println("    3. Bixi Biil");
+            System.out.println("    4. Uwareeji EVCPlus");
+            System.out.println("    5. Warbixin Kooban");
+            System.out.println("    6. Salaam Bank");
+            System.out.println("    7. Mareynta");
+            System.out.println("    8. Taaj");
+            System.out.println("    0. kabax");
+        }
+
+        //Qiimaha Lacagta iyo Numberka//;
+
+        double haraagaga = 500;
+        int Random_Kaarka = 619462760;
+        int Evc_PLUS = input.nextInt();
+        if (Evc_PLUS == 1) {
+            System.out.println("haraagaga xisaabta waa :" + haraagaga);
+        }
+        // qeybta_kowwad itus haraaga;
+        else if (Evc_PLUS == 2) {
+            System.out.println("kaarka hadalka");
+            System.out.println("  1.  kushubo Airtime");
+            System.out.println("  2. ugu shubo Airtime");
+            System.out.println("  3. mifi packages");
+            System.out.println("  4. ku shubo internet");
+            System.out.println("  5. ugu shup qof kale (MMT)");
+
+            // ku shubo Airtime;
+
+            int kushubo_Airtime = input.nextInt();
+            Date currenDateAndTime = new Date();
+            if (kushubo_Airtime == 1) {
+                System.out.println("Fadlan Geli Lacagta :");
+                int fadlan_geli_lacagta = input.nextInt();
+                System.out.println("mahubta ina aad inaad $" + fadlan_geli_lacagta + "ugu shubi dontid?");
+                System.out.println("1. HAA");
+                System.out.println("2. MAYA");
+
+                int checking_kaarkaga = input.nextInt();
+                if (checking_kaarkaga == 1) {
+                    if (fadlan_geli_lacagta > haraagaga)
+                        System.out.println("haragaga xisaabta kuma filana!");
+                    else if (fadlan_geli_lacagta <= haraagaga)
+                        System.out.println("EVC PLUS");
+                    System.out.println("waxaad ku guuleysatay inad $" + fadlan_geli_lacagta + "ugu shubatid" + "  " + "Tar" + currenDateAndTime + "haragaga xisaabta waa $" + (haraagaga - fadlan_geli_lacagta));
+
+                } else {
+                    System.out.println("mahadsanid!.");
+                }
+
+            } else if (kushubo_Airtime == 2) {
+                System.out.println("fadlan geli mobelka:");
+                int number_ku_shubida = input.nextInt();
+                System.out.println("fadlan geli lacagta:");
+                int lacagta_kushubida = input.nextInt();
+                System.out.println("mahubtaa inaad $" + lacagta_kushubida + "ugu ushubatid " + "252_" + number_ku_shubida + "?");
+                System.out.println("1.HAA");
+                System.out.println("2.MAYA");
+
+                //checking ku shubida:
+
+                int checking_kushubida = input.nextInt();
+                if (checking_kushubida == 1) {
+                    if (lacagta_kushubida > haraagaga) {
+                        System.out.println("haragaga xisabta kuma filna");
+                    } else if (lacagta_kushubida <= haraagaga)
+
+                        System.out.println("waad ku guuleysatay inaad ugu shubto $" + lacagta_kushubida + " " + "252-" + number_ku_shubida + "ku hadal ah" + " " + "Tar:" + currenDateAndTime + " " + " haragaagu waa $:" + (haraagaga - lacagta_kushubida));
+                } else {
+                    System.out.println(" maadsanid!");
+                }
+
+                // qeybta 3aad ee airtime mifi;
+
+            } else if (kushubo_Airtime == 3) {
+                System.out.println(" -EvC_PLUS-");
+                System.out.println(" 1. ku shubo Data-da Mifi");
+                int checking_mifi = input.nextInt();
+
+                if (checking_mifi == 1) {
+                    System.out.println("--Internet Bundle Recharge-- ");
+                    System.out.println(" 1. Isbuucle(Weekly)");
+                    System.out.println(" 2. Maalinle(Daily)");
+                    System.out.println(" 3 . Bille(Mifi)");
+
+                    // weekly (isbuucle) mifi:
+                }
+                int date_Limited = input.nextInt();
+                switch (date_Limited) {
+                    //                                        Qeybta kowaad Ee MIFi Date
+
+                    case 1:
+                        System.out.println("Fadlan Dooro bunle Ka");
+                        System.out.println("1.$5 = 10 GB");
+                        System.out.println("2.$10 = 25 GB");
+
+                        int date_Exchange = input.nextInt();
+
+//                                        Qeybta ku shubid 5$ :
+
+                        if (date_Exchange == 1) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $5ugu shubtid?" + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 10GB " + "252-" + MIFI_user + " " + "Tar" + currenDateAndTime + " " + "haragaga xisaabta waa $" + haraagaga);
+//
+                            } else {
+                                System.out.println("Macsalaamo");
+                            }
+                        }
+
+//                                        Qeybta ku shubid 10$ :
+
+                        else if (date_Exchange == 2) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $10ugu shubtid " + MIFI_user);
+                            int lacag_kushabasada = input.nextInt();
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqijin = input.nextInt();
+                            if (Xaqijin == 1) {
+                                System.out.println("waxa ugu shubtay 25GB " + MIFI_user + "haragaga waa $:" + (haraagaga - lacag_kushabasada));
+//
+                            } else {
+                                System.out.println("Macsalaamo");
+                            }
+                        }
+                        break;
+
+                    //        Qeybta lawaad Ee MIFi Date
+
+                    case 2:
+                        System.out.println("Fadlan Dooro bunle Ka");
+                        System.out.println("1.$1 = 2GB");
+                        System.out.println("2.$2 = 5GB");
+
+                        int date_Exchange_2 = input.nextInt();
+                        if (date_Exchange_2 == 1) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $1 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 2GB " + MIFI_user + " " + "Tar" + currenDateAndTime + "haraagaga waa $" + haraagaga);
+//                                                System.out.println("haraagaagu waa $"+Haraage);
+                            } else {
+                                System.out.println("Macsalaamo");
+                            }
+                        }
+
+//                                        Qeybta ku shubid 2$ :
+
+                        else if (date_Exchange_2 == 2) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $2 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 5GB " + MIFI_user);
+//                                                System.out.println("haraagaagu waa $"+Haraage);
+                            } else {
+                                System.out.println("Macsalaamo");
+                            }
+                        }
+                        break;
+
+//                                        Qeybta sedexaad Ee MIFi Date
+
+                    case 3:
+                        System.out.println("Fadlan Dooro bunle Ka");
+                        System.out.println("1.$20 = 40 GB");
+                        System.out.println("2.$40 = 80 GB");
+                        System.out.println("3.$60 = 150 GB");
+                        System.out.println("4.$30 = Unlimited Month");
+
+                        int date_Exchange_3 = input.nextInt();
+
+                        //   Qeybta waa Qeybta kle 40Gb
+                        if (date_Exchange_3 == 1) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $20 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 40GB " + MIFI_user);
+                            } else {
+                                System.out.println("Macsalaamo");
+
+                            }
+                        } else if (date_Exchange_3 == 2) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $40 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 80GB " + MIFI_user);
+                            } else {
+                                System.out.println("mahadsanid:");
+                            }
+                        } else if (date_Exchange_3 == 3) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $60 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay 150GB " + MIFI_user);
+                            } else {
+                                System.out.println("Macsalaamo:");
+                            }
+                        } else if (date_Exchange_3 == 4) {
+                            System.out.print("Fadlan Geli MIFI user : ");
+                            int MIFI_user = input.nextInt();
+                            System.out.println("Ma hubtaa inaad $30 ugu shubtid " + MIFI_user);
+                            System.out.println("1.HAA\n2.MAYE");
+
+                            int Xaqiin = input.nextInt();
+                            if (Xaqiin == 1) {
+                                System.out.println("waxa ugu shubtay Unlimited Month " + MIFI_user);
+                            } else {
+                                System.out.println("Macsalaamo");
+                            }
+                        }
+
+                        break;
+                }  // 4,kushubo ;
+            } else if (kushubo_Airtime == 4) {
+                System.out.println("-- Fadlan Dooro numberka- ku shubeyso -- ");
+                System.out.println("1. isbuucle (Weekly)");
+                System.out.println("2. TIME BASED PACKAGES");
+                System.out.println("3. DATA");
+                System.out.println("4. Maalinle(Daily)");
+                System.out.println("5 .Bille (MIFI)");
+
+                int kushubashada = input.nextInt();
+                switch (kushubashada) {
+                    case 1:
+                        System.out.print("Fadlan Geli Lacagta : ");
+                        int Lacagta_ku_shubashada = input.nextInt();
+                        System.out.println("Ma hubtaa in aad $" + Lacagta_ku_shubashada);
+                        System.out.println("1. Haa \n2.Maye");
+
+                        int Hubinta_ku_shubida = input.nextInt();
+                        if (Hubinta_ku_shubida == 1 && Lacagta_ku_shubashada >= haraagaga) {
+                            System.out.println("Haraagu kuma Filna No-Mobilka 252" + Random_Kaarka);
+
+                        } else if (Hubinta_ku_shubida == 2) {
+                            System.out.println("Macsalaamo");
+                        } else {
+                            System.out.println("Waxa ku shubatay $" + Lacagta_ku_shubashada);
+                        }
+
+                        break;
+
+//                                Time_Based QeybTisa
+                    case 2:
+                        System.out.println("Fadlan Geli LacagTa : ");
+                        int Lacagta_ugu_shubida = input.nextInt();
+                        System.out.println("Ma Hubtaa in aad $" + Lacagta_ugu_shubida + " ugu shubutid");
+                        System.out.println("1.Haa \n2.Maye");
+
+//                                Checking :
+
+                        int Hubinta_ugu_shubida = input.nextInt();
+                        if (Hubinta_ugu_shubida == 1 && Lacagta_ugu_shubida >= haraagaga) {
+                            System.out.println("Haraagaagu xisaabtada kuma Filno No-Mobilka 252 " + Random_Kaarka);
+
+                        } else if (Hubinta_ugu_shubida == 2) {
+                            System.out.println("Macsalaamo");
+                        } else {
+                            System.out.println("Waxa Ugu shubatay $" + Lacagta_ugu_shubida);
+                        }
+                        break;
+                    case 3:
+                        System.out.println("fadlan geli lacagta");
+                        int lacagta_kushubida = input.nextInt();
+                        System.out.println("mahubtaa inaad $" + lacagta_kushubida + " 252-" + Random_Kaarka + " ku subatid?");
+                        System.out.println("1.Haa\n2.Maya");
+                        int xaqiijin = input.nextInt();
+                        if (xaqiijin == 1)
+                            if (lacagta_kushubida > haraagaga)
+                                System.out.println("haragaga xisaabta kuma filna ");
+                            else if (lacagta_kushubida <= haraagaga) {
+                                System.out.println("waxad ugu shubatay$" + "\n" + "haragaga waa $" + (haraagaga - lacagta_kushubida));
+                            } else {
+                                System.out.println("mahadsanid");
+                                break;
+                            }
+                    case 4:
+                        System.out.println("fadlan geli lacagta:");
+                        int fadlan_geli_lacagta = input.nextInt();
+                        System.out.println(" mahubta inad ugu $" + fadlan_geli_lacagta + "ugu shubatid?");
+                        System.out.println("1.Haa\n2.maya");
+                        int xaqiijin_ha_maya = input.nextInt();
+                        if (xaqiijin_ha_maya == 1)
+                            System.out.println(" waxad ugu $" + fadlan_geli_lacagta + "ugu shubatay " + " " + Random_Kaarka + " " + "haragaga waa $" + (haraagaga - fadlan_geli_lacagta));
+                        break;
+                    case 5:
+                        System.out.println("fadlan geli mobile-ka");
+                        int fadlan_geli_mobileka = input.nextInt();
+                        System.out.println("fadlan geli lacagta");
+                        int fadlan_lacagta = input.nextInt();
+                        System.out.println("mahubta inad $" + fadlan_lacagta + " ugu shuban dontid?");
+                        System.out.println("1.Haa\n2.Maya");
+                        int xaqiijin_ha_maya_5 = input.nextInt();
+                        if (xaqiijin_ha_maya_5 == 1)
+                            if (fadlan_lacagta > haraagaga)
+                                System.out.println("haraaga xisaabta kuma filna" + Random_Kaarka);
+                            else if (fadlan_lacagta <= haraagaga) {
+                                System.out.println("waxad ku guuleysatay inad $" + fadlan_lacagta + " " + "ugu shabatid" + " " + "Ta:" + currenDateAndTime + " " + "haragagu waa $" + (haraagaga - fadlan_lacagta));
+                            } else
+                                System.out.println("mahadsanid");
+                        break;
+                }
+            }
+
+//        qeybta 3 aad Bixi-Biil;
+        } else if (Evc_PLUS == 3) {
+            System.out.println("Bixi Biil");
+            System.out.println("1. Post Paid");
+            System.out.println("2. Ku iibso");
+
+            int Bixi_Biilka = input.nextInt();
+            if (Bixi_Biilka == 1) {
+                System.out.println("Post Paid");
+                System.out.println(" 1.Ogow Biilka.");
+                System.out.println(" 2.Bixi Biil.");
+                System.out.println(" 3.ka Bixi Biil.");
+
+                int Post_Paid = input.nextInt();
+
+                if (Post_Paid == 1) {
+                    System.out.println("error ocurred, please try again later");
+                } else if (Post_Paid == 2) {
+                    System.out.print("Fadlin Geli Lacagta : ");
+                    int Amount_Biilka = input.nextInt();
+
+                    System.out.println("Ma Hubtaa in aad Bixinayso Biilka lacagtiisa tahay $" + Amount_Biilka + " :");
+                    System.out.println(" 1.Haa");
+                    System.out.println(" 2.Maye");
+
+                    int Checking_Amount = input.nextInt();
+                    if (Checking_Amount == 1) {
+                        if (Amount_Biilka > haraagaga)
+                            System.out.println("MMI Code: AuSTimeout");
+                        else if (Amount_Biilka <= haraagaga)
+                            System.out.println("Waxa aad Bixisay Biil Lacagtiisa tahay $" + Amount_Biilka + "." + "haragaagu waa $" + (Amount_Biilka - haraagaga));
+                    } else {
+                        System.out.println("Mahadsanid!.");
+                    }
+                }
+
+//                        Post_Paid ku shubo :
+
+                else if (Post_Paid == 3) {
+                    System.out.print("Fadlan Geli Mobilka :");
+                    int NumberKu_shubida = input.nextInt();
+                    System.out.print("Fadlan Geli Lacagta : ");
+                    int Amount = input.nextInt();
+                    System.out.println("Ma hubtaa inaad bixisid bill lacagtiisu tahay : $" + Amount + " oo laga rabo " +
+                            "tel No " + NumberKu_shubida);
+                    System.out.println("1. Haa");
+                    System.out.println("2. Maye");
+                    int Checking_Lacagta = input.nextInt();
+
+//                         Hubinta LacagTa in aad Rabto in aad Dirto :
+
+                    if (Checking_Lacagta == 1) {
+                        if (haraagaga <= Amount) {
+                            System.out.println("Haraaga Xisaabtaadu kuguma filna, mobile No: 252 " + Random_Kaarka);
+                        } else {
+                            double Result_Lacagaha = haraagaga - Amount;
+                            System.out.println("Waxa aad bixisay biilka $" + Amount + " Mobilka No: 252" + NumberKu_shubida);
+                            System.out.println("Haraaga xisaabtaadu waa $" + Result_Lacagaha);
+                        }
+
+                    } else {
+                        System.out.println("Mahadsanid!.");
+                    }
+                }
+            }
+
+
+//                    2.Ku iibso;
+            else if (Bixi_Biilka == 2) {
+                System.out.print("Fadlan Geli aqoonsiga ganacsiga");
+
+
+            }
+            //       Qeybta 4aad. U wareeji EVCplus
+
+        } else if (Evc_PLUS == 4) {
+            System.out.print("Fadlan Geli Mobile-ka :");
+            int Number = input.nextInt();
+            System.out.print("Fadlan Geli Lacagta : ");
+            int Amount = input.nextInt();
+            System.out.println("Ma hubtaa inaad $" + Amount + " u wareejisid " + "252 " + Number);
+            System.out.println("1. Haa");
+            System.out.println("2. Maye");
+            int Checking_Lacagta = input.nextInt();
+
+//                Hubinta LacagTa in aad Rabto in aad Dirto :
+            if (Checking_Lacagta == 1) {
+                if (haraagaga <= Amount) {
+                    System.out.println("Haraaga Xisaabtaadu kuguma filna, mobile No: 252 " + Random_Kaarka);
+                } else {
+                    double Result_Lacagaha = haraagaga - Amount;
+                    System.out.println("Haraaga xisaabtaadu waa " + Result_Lacagaha);
+                }
+
+            } else {
+                System.out.println("Mahadsanid!.");
+            }
+        } else if (Evc_PLUS == 5) {
+            System.out.print("Warbixin Kooban");
+            System.out.println("    1. Last Action");
+            System.out.println("    2. Wareejintii u dambsay");
+            System.out.println("    3. iibsashadii u dambeysay");
+            System.out.println("    4. Last 3 Actions");
+            System.out.println("    5. Email Me My Activity");
+
+            int WarbixinTa = input.nextInt();
+
+//                    seddex Last_Action:
+            String Last_1 = "[-Evcplus-] \nwaxaad $2 ka heshay 0612888898, Tar: 12/03/24 04:20:18 \nHaraagaagu waa $2.";
+            String Last_2 = "[-Evcplus-] \nwaxaad $15 ka heshay 0612888898, Tar: 12/03/24 04:20:18 \nHaraagaagu waa $17.";
+            String Last_3 = "[-Evcplus-] \nwaxaad $2 aad u wareejisay 0612888898, Tar: 12/03/24 04:20:18 \nHaraagaagu waa $15.";
+            String ugu_danbeysay = "[-Evcplus-] \nwaxaad $10 aad u wareejisay 0612888898, Tar: 12/03/24 04:20:18 \nHaraagaagu waa $25.";
+
+            if (WarbixinTa == 1) {
+                System.out.println(Last_1);
+            } else if (WarbixinTa == 2) {
+                System.out.println(Last_2);
+            } else if (WarbixinTa == 3) {
+                System.out.println(ugu_danbeysay);
+            } else if (WarbixinTa == 4) {
+                System.out.println(Last_1 + "\n" + Last_2 + "\n" + Last_3);
+            }
+//          qeybta 6aad Salaam_Bank;
+        } else if (Evc_PLUS == 6) {
+            System.out.println("Salaam Bank:");
+            System.out.println("1. Itus Haraaga");
+            System.out.println("2. Lacag Dhigasho");
+            System.out.println("3. Lacag Qaadasho");
+            System.out.println("4. Ka Wareeji EVCPlus");
+            System.out.println("5. Ka Wareejin Account-ka");
+            System.out.println("6. Hubi Wareejin Account");
+            System.out.println("7. Maareynta Bankiga");
+            System.out.println("8. Kala bax");
+            int userpin = 1234;
+            int haraagaga_acounka = 2000;
+            int random_acount = input.nextInt();
+
+            int sb = input.nextInt();
+            switch (sb) {
+                case 1:
+                    System.out.print("Fadlan geli PIN-ka sirta: ");
+                    int sbPin = input.nextInt();
+                    if (sbPin == userpin) {
+                        System.out.println("Haraagaagu waa: $" + haraagaga_acounka);
+                    } else {
+                        System.out.println("PIN waa khaldan.");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Fadlan geli lacagta aad dhigeyso: ");
+                    double dhigasho = input.nextDouble();
+                    System.out.println("Fadlan Geli Macluumaad:");
+                    String macluumad = input.next();
+                    System.out.println("Fadalan geli Numberkaaga Sirta ee Bangiga");
+                    int sirta_bankiga = input.nextInt();
+                    if (sirta_bankiga == 1234)
+                        System.out.println("mahubtaa inaad $:" + dhigasho + "dhigatid Account_kaaga bangiga?\n 1.Haa\n 2.Maya");
+                    else
+                        System.out.println("Pin_kaaga waa qalad");
+                    int hupinta = input.nextInt();
+                    if (hupinta == 1) {
+                        if (dhigasho >= haraagaga_acounka)
+                            System.out.println("haraagaaga Xisaabta Kuma filna, Mobile No:" + "619462760");
+                        else if (dhigasho <= haraagaga_acounka) {
+
+                        }
+                        System.out.println("waxad $:" + dhigasho + "lacagta dhigatay Account_kaaga");
+                    } else if (hupinta == 2) {
+                        System.out.println("Mahadsanid.!");
+
+                    }
+                    break;
+                case 3:
+                    System.out.print("Fadlan geli lacagta : ");
+                    double Amount_bankiga = input.nextDouble();
+                    System.out.println("Fadlan Geli Macluumaad:");
+                    String information = input.next();
+                    System.out.println("Fadalan geli Numberkaaga Sirta ee Bangiga");
+                    int password = input.nextInt();
+                    if (password == 2222)
+                        System.out.println("mahubtaa inaad $:" + Amount_bankiga + "qaadatid Account_kaaga bangiga?\n 1.Haa\n 2.Maya");
+                    else
+                        System.out.println("Pin_kaaga waa qalad");
+                    int checking = input.nextInt();
+                    if (checking == 1) {
+                        if (Amount_bankiga >= haraagaga_acounka)
+                            System.out.println("haraagaaga Xisaabta Kuma filna, Mobile No:" + "619462760");
+                        else if (Amount_bankiga <= haraagaga_acounka) {
+
+                        }
+                        System.out.println("waxad $:" + Amount_bankiga + "lacagta ka qadatay Account_kaaga");
+                    } else if (checking == 2) {
+                        System.out.println("Mahadsanid.!");
+                        break;
+                    }
+                case 4:
+                    System.out.println("Dooro bankiga\n1.Salaam Somali Bank \n2.Salaam SCH \n3.Bankiga Beeraha \n4.Darasalam \n5.MyBank LTD");
+                    int Bank_Money = 1000;
+                    int Salaam_Bank = input.nextInt();
+
+                    if (Salaam_Bank == 1) {
+                        System.out.print("Fadlan soo Geli Account-ka : ");
+                        int Account_user = input.nextInt();
+                        System.out.print("Fadlan Geli Macluumaadka : ");
+                        String Macluumaadka = input.next();
+                        System.out.print("Fadlan Geli Lacagta :");
+                        int Amount_salam = input.nextInt();
+                        System.out.println("Ma hubtaa in aad udirayso Account-ka " + Account_user + " $ " + Amount_salam);
+                        System.out.println("1: Haa");
+                        System.out.println("2: Maye");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (Bank_Money >= Amount_salam) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + Account_user);
+                            } else {
+                                double Result_salaam = Bank_Money - Amount_salam;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + Amount_salam + "Haraaga Xisaabtada waa " + Result_salaam);
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+                        }
+                    }
+
+//                        Qeybta 2aad;
+
+                    else if (Salaam_Bank == 2) {
+                        System.out.print("Fadlan soo Geli Account-ka : ");
+                        int Account_user = input.nextInt();
+                        System.out.print("Fadlan Geli Macluumaadka : ");
+                        String Macluumaadka = input.next();
+                        System.out.print("Fadlan Geli Lacagta :");
+                        int Amount_salam = input.nextInt();
+                        System.out.println("Ma hubtaa in aad udirayso Account-ka " + Account_user + " $ " + Amount_salam);
+                        System.out.println("1: Haa");
+                        System.out.println("2: Maye");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (Bank_Money <= Amount_salam) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + Account_user);
+                            } else {
+                                double Result_salaam = Bank_Money - Amount_salam;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + Amount_salam + "Haraaga Xisaabtada waa " + Result_salaam);
+                                ;
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+                        }
+                    }
+
+//                     qeybta 3;
+
+                    else if (Salaam_Bank == 3) {
+                        System.out.print("Fadlan soo Geli Account-ka : ");
+                        int Account_user = input.nextInt();
+                        System.out.print("Fadlan Geli Macluumaadka : ");
+                        String Macluumaadka = input.next();
+                        System.out.print("Fadlan Geli Lacagta :");
+                        int Amount_salam = input.nextInt();
+                        System.out.println("Ma hubtaa in aad udirayso Account-ka " + Account_user + " $ " + Amount_salam);
+                        System.out.println("1: Haa");
+                        System.out.println("2: Maye");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (Bank_Money <= Amount_salam) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + Account_user);
+                            } else {
+                                double Result_salaam = Bank_Money - Amount_salam;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + Amount_salam);
+                                System.out.println("Haraaga Xisaabtada waa " + Result_salaam);
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+                        }
+                    }
+
+//                        Qeybta 4 aad :
+
+                    else if (Salaam_Bank == 4) {
+                        System.out.print("Fadlan soo Geli Account-ka : ");
+                        int Account_user = input.nextInt();
+                        System.out.print("Fadlan Geli Macluumaadka : ");
+                        String Macluumaadka = input.next();
+                        System.out.print("Fadlan Geli Lacagta :");
+                        int Amount_salam = input.nextInt();
+                        System.out.println("Ma hubtaa in aad udirayso Account-ka " + Account_user + " $ " + Amount_salam);
+                        System.out.println("1: Haa");
+                        System.out.println("2: Maye");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (Bank_Money <= Amount_salam) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + Account_user);
+                            } else {
+                                double Result_salaam = Bank_Money - Amount_salam;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + Amount_salam);
+                                System.out.println("Haraaga Xisaabtada waa " + Result_salaam);
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+                        }
+                    } else if (Salaam_Bank == 5) {
+                        System.out.print("Fadlan soo Geli Account-ka : ");
+                        int Account_user = input.nextInt();
+                        System.out.print("Fadlan Geli Macluumaadka : ");
+                        String Macluumaadka = input.next();
+                        System.out.print("Fadlan Geli Lacagta :");
+                        int Amount_salam = input.nextInt();
+                        System.out.println("Ma hubtaa in aad udirayso Account-ka " + Account_user + " $ " + Amount_salam);
+                        System.out.println("1: Haa");
+                        System.out.println("2: Maye");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (Bank_Money <= Amount_salam) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + Account_user);
+                            } else {
+                                double Result_salaam = Bank_Money - Amount_salam;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + Amount_salam + "Haraaga Xisaabtada waa " + Result_salaam);
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+
+                        }
+
+
+                    }
+                case 5:
+                    System.out.println("Fadlan soo Geli Account ama Mobile");
+                    int geli_acount = input.nextInt();
+                    if (geli_acount < 30050005)
+                        System.out.println("Invalid Account Number ");
+                    else if (geli_acount == 30050005) {
+                    }
+                    System.out.println("Fadlan Geli Lacagta");
+                    int gei_lacagta = input.nextInt();
+                    String Dial = input.nextLine();
+                    System.out.println("Fadlan Geli Macluumad");
+                    Dial = input.nextLine();
+                    System.out.println("Fadlan Geli Sirta-Bangigaaga");
+                    int geli_srt = input.nextInt();
+                    int account_bank = 2000;
+                    if (geli_srt != 2233) {
+                        System.out.println("Sirta_Bangigaaga waa qalad ");
+                    } else if (geli_srt == 2233) {
+                        System.out.println("Mahubtaa inaad USD $" + gei_lacagta + "Uwareejiso Bank Account: JAMHURIYA UNIVERSITY (JUST)(30050005)? \n1.Haa\n2.Maya");
+
+                        int Check = input.nextInt();
+                        if (Check == 1) {
+                            if (gei_lacagta > account_bank) {
+                                System.out.println("Haraaga Xisaabtada Kuguma Filno 252 : " + geli_acount);
+                            } else {
+                                double Result_salaam = gei_lacagta - account_bank;
+                                System.out.println("waxa u wareejisay Accoun-ta $ " + geli_acount + "Haraaga Xisaabtada waa " + Result_salaam);
+                            }
+                        } else if (Check == 2) {
+                            System.out.println("Mahadsanid !");
+                            break;
+                        }
+                    }
+                case 6:
+                    String otp = input.nextLine();
+                    System.out.print("Geli OTP: ");
+                    otp = input.nextLine();
+                    System.out.println("Your otp for log in :" + otp);
+                    break;
+                case 7:
+                    System.out.println("1. Bedel PIN-ka Bankiga");
+                    System.out.println("2. Bedel Password-ka Bankiga");
+                    int maareynBank = input.nextInt();
+                    input.nextLine();
+
+                    if (maareynBank == 1) {
+                        System.out.print("Geli PIN hore: ");
+                        int oldPin = input.nextInt();
+                        int user_bin = 1234;
+
+                        if (oldPin == user_bin) {
+                            System.out.print("Geli PIN cusub: ");
+                            user_bin = input.nextInt();
+                            System.out.println("PIN cusub waa: " + user_bin);
+                        } else {
+                            System.out.println("PIN hore waa khalad.");
+                        }
+                    } else if (maareynBank == 2) {
+                        System.out.print("Password hore: ");
+                        String passOld = input.nextLine();
+                        System.out.print("Password cusub: ");
+                        String passNew = input.nextLine();
+                        System.out.println("Password cusub waa: " + passNew);
+                    }
+                    break;
+                case 8:
+                    System.out.print("Geli Account Number-kaaga: ");
+                    String account = input.nextLine();
+
+                    System.out.print("Geli lacagta aad rabto inaad kala baxdo: $");
+                    double amountWithdraw = input.nextDouble();
+                    input.nextLine();
+                    System.out.print("Fadlan geli PIN-kaaga: ");
+                    String pinWithdraw = input.nextLine();
+                    int balance = 2000;
+                    String Correct_pin = "1234";
+
+                    if (!pinWithdraw.equals(Correct_pin)) {
+                        System.out.println(" PIN-ka waa khaldan.");
+                    } else if (amountWithdraw > balance) {
+                        System.out.println(" Ma haysatid lacag kugu filan. Balance-kaagu waa $" + balance);
+                    } else {
+                        balance -= amountWithdraw;
+                        System.out.println(" Waxaad si guul leh uga baxday $" + amountWithdraw);
+                        System.out.println("Haraagaaga cusub waa: $" + balance);
+                    }
+                    break;
+
+
+            }
+            // qeybta  7 aad Maareynta;
+        } else if (Evc_PLUS == 7) {
+            int maareyn;
+            int opp;
+            int phone;
+//            qeybta 7 aad maareynta;
+            do {
+                System.out.println("\nMaareynta:");
+                System.out.println("1. Bedel lambarka sirta ah");
+                System.out.println("2. Bedel Luuqad");
+                System.out.println("3. Wargelin Mobile Lumay");
+                System.out.println("4. Lacag Xirasho");
+                System.out.println("5. U celi lacag qaldantay");
+                System.out.println("6. Fadlan numberka is diiwan Gelinta");
+                System.out.println("0. Ka bax");
+
+                maareyn = input.nextInt();
+                input.nextLine(); // Clean buffer
+
+                switch (maareyn) {
+                    case 1:
+                        System.out.println("Fadlan geli pin-kaaga cusub");
+                        int pin1 = input.nextInt();
+
+                        System.out.println("Hubi pin-kaaga cusub");
+                        int pin2 = input.nextInt();
+
+                        if (pin1 == pin2) {
+                            System.out.println("Waad ku guuleysatay, pin-ka waa la bedelay.");
+                        } else {
+                            System.out.println("Pin-ku isma lahan, isku day mar kale.");
+                        }
+                        break;
+
+                    case 2:
+                        System.out.println("Fadlan dooro luqada");
+                        System.out.println("1. English");
+                        System.out.println("2. Somali");
+                        opp = input.nextInt();
+                        if (opp == 1)
+                            System.out.println("[-EVCPLUS-] you have successfully changed your language");
+                        else if (opp == 2)
+                            System.out.println("[-EVCPLUS-] waad ku guulaysatay in aad badasho luqadda");
+                        break;
+
+                    case 3:
+                        System.out.println("Fadlan geli mobile-ka lumay:");
+                        phone = input.nextInt();
+                        System.out.println("Fadlan geli sirta numberka:");
+                        int pass = input.nextInt();
+                        System.out.println("Ma hubtaa in aad u diiwaan geliso lumid number-kan " + phone + "?");
+                        System.out.println("1. Haa\n2. Maya");
+                        opp = input.nextInt();
+                        Date currentDateAndTime = new Date();
+                        if (opp == 1)
+                            System.out.println("Waxaad ku guuleysatay inaad diwaan geliso " + phone + " - " + currentDateAndTime);
+                        else
+                            System.out.println("Mahadsanid");
+                        break;
+
+                    case 4:
+                        System.out.println("Fadlan geli numberka lagu qalday:");
+                        int wrongNum = input.nextInt();
+                        System.out.println("Fadlan geli numberka saxda ah:");
+                        int correctNum = input.nextInt();
+                        System.out.println("Ma hubtaa in aad xirto lacagtan?\n1. Haa\n2. Maya");
+                        opp = input.nextInt();
+                        if (opp == 1)
+                            System.out.println("Waxaad ku guuleysatay inaad xirto lacagtan.");
+                        else
+                            System.out.println("Mahadsanid");
+                        break;
+
+                    case 5:
+                        System.out.println("Fadlan geli aqoonsiga lacag diridda:");
+                        int transId = input.nextInt();
+                        System.out.println("Fadlan geli macluumaad:");
+                        opp = input.nextInt();
+                        System.out.println("Ma hubtaa in aad celiso lacagtaan ?\n1. Haa\n2. Maya");
+                        opp = input.nextInt();
+                        if (opp == 1)
+                            System.out.println("Waxaad ku guuleysatay inaad celiso lacagtan.");
+                        else
+                            System.out.println("Mahadsanid");
+                        break;
+
+                    case 6:
+                        System.out.println("Fadlan geli numberka is diiwaan gelinta:");
+                        phone = input.nextInt();
+                        System.out.println("Waxaad ku guuleysatay inaad is diiwaan geliso: " + phone);
+                        break;
+
+                    case 0:
+                        System.out.println("Waad baxday qeybta maareynta.");
+                        break;
+
+                    default:
+                        System.out.println("Doorasho khaldan, isku day mar kale.");
+                }
+
+            } while (maareyn != 0);
+        }
+//         qeybta 8 aad Taaj;
+        if (Evc_PLUS == 8) {
+            int choice;
+            String correctPin = "1234";
+
+            System.out.println("\nTAAJ");
+            System.out.println("1. Gudaha");
+            System.out.println("2. Dibadda");
+            System.out.println("3. Ogow Khidmada");
+            System.out.println("4. Macluumaadka Xawaalada");
+            System.out.println("5. Jooji Xawaalad");
+            System.out.println("6. Furi Xawaalad");
+            System.out.println("0. Ka bax");
+            System.out.println("Enter Your Choice");
+            choice = input.nextInt();
+            input.nextLine();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Fadlan geli aqoonsiga lacag diridda (PIN): ");
+                    String pin1 = input.nextLine();
+                    if (pin1.equals(correctPin)) {
+                        System.out.print("Magaca qofka gudaha aad u direyso: ");
+                        String name1 = input.nextLine();
+                        System.out.print("Lacagta ($): ");
+                        double amt1 = input.nextDouble();
+                        input.nextLine();
+                        System.out.println(" Waxaad u dirtay $" + amt1 + " gudaha: " + name1);
+                    } else {
+                        System.out.println(" PIN khaldan.");
+                    }
+                    break;
+
+                case 2:
+                    System.out.print("Fadlan geli aqoonsiga lacag diridda (PIN): ");
+                    String pin2 = input.nextLine();
+                    if (pin2.equals(correctPin)) {
+                        System.out.print("Magaca qofka dibadda aad u direyso: ");
+                        String name2 = input.nextLine();
+                        System.out.print("Waddanka uu joogo: ");
+                        String country = input.nextLine();
+                        System.out.print("Lacagta ($): ");
+                        double amt2 = input.nextDouble();
+                        input.nextLine();
+                        System.out.println(" Waxaad u dirtay $" + amt2 + " → " + name2 + " (" + country + ")");
+                    } else {
+                        System.out.println("PIN khaldan.");
+                    }
+                    break;
+
+                case 3:
+                    System.out.print("Geli lacagta aad rabto inaad dirto si loo xisaabiyo khidmada: ");
+                    double amount = input.nextDouble();
+                    input.nextLine();
+                    double fee = (amount <= 50) ? 0.35 : 0.42;
+                    System.out.println("Khidmadaha lacagta $" + amount + " waa: $" + fee);
+                    break;
+
+                case 4:
+                    System.out.print("Magaca Diraha: ");
+                    String sender = input.nextLine();
+                    System.out.print("Magaca Qaataha: ");
+                    String receiver = input.nextLine();
+                    System.out.print("Goobta: ");
+                    String location = input.nextLine();
+                    System.out.print("Lacagta ($): ");
+                    double xAmount = input.nextDouble();
+                    input.nextLine();
+                    System.out.println("Xogta Xawaaladda: " + sender + " → " + receiver + " | Goob: " + location + " | $" + xAmount);
+                    break;
+
+                case 5:
+                    System.out.print("Fadlan geli aqoonsiga lacag diridda (PIN): ");
+                    String pin5 = input.nextLine();
+                    if (pin5.equals(correctPin)) {
+                        System.out.print("Geli lambarka xawaaladda la joojinayo: ");
+                        String transId5 = input.nextLine();
+                        System.out.println(" Xawaaladda " + transId5 + " waa la joojiyey.");
+                    } else {
+                        System.out.println("PIN khaldan.");
+                    }
+                    break;
+
+                case 6:
+                    System.out.print("Fadlan geli aqoonsiga lacag diridda (PIN): ");
+                    String pin6 = input.nextLine();
+                    if (pin6.equals(correctPin)) {
+                        System.out.print("Geli lambarka xawaaladda la furayo: ");
+                        String transId6 = input.nextLine();
+                        System.out.println(" Xawaaladda " + transId6 + " waa la furay.");
+                    } else {
+                        System.out.println("PIN khaldan.");
+                    }
+                    break;
+
+                case 0:
+                    System.out.println(" Mahadsanid, waad ka baxday.");
+                    break;
+
+                default:
+                    System.out.println(" Doorasho khaldan, isku day mar kale.");
+            }
+
+        } else if (Evc_PLUS == 9) {
+            evcPlusMenu(input);
+        }
+    }
+    // 9 aad Bill meyment;
+
+    public static void evcPlusMenu(Scanner input) {
+        System.out.println("EVC_Plus");
+        System.out.println("1. Tus Haraaga Bill-ka");
+        System.out.println("2. Wada Bixi Bill-ka");
+        System.out.println("3. Qeyb Ka Mid Ah Bixi");
+        System.out.println("0. Ka Bax");
+        System.out.print("Dooro (0-3): ");
+
+        String correctPin_8 = "1234";
+        double totalBill = 100.0;
+        double paidAmount = 0.0;
+
+        int choice_8 = input.nextInt();
+        input.nextLine();  // Clear buffer
+
+        switch (choice_8) {
+            case 1:
+                double balance = totalBill - paidAmount;
+                System.out.println("Haraaga bill-kaagu waa: $" + balance);
+                break;
+
+            case 2:
+                System.out.print("Fadlan geli PIN-kaaga: ");
+                String pinFull = input.nextLine();
+                if (pinFull.equals(correctPin_8)) {
+                    paidAmount = totalBill;
+                    System.out.println("Bill-ka oo dhan ($" + totalBill + ") waa la bixiyay.");
+                } else {
+                    System.out.println("PIN-ka waa khaldan.");
+                }
+                break;
+
+            case 3:
+                System.out.print("Fadlan geli lacagta aad rabto inaad bixiso: $");
+                double partial = input.nextDouble();
+                input.nextLine();
+
+                System.out.print("Fadlan geli PIN-kaaga: ");
+                String pinPartial = input.nextLine();
+                if (pinPartial.equals(correctPin_8)) {
+                    if (paidAmount + partial > totalBill) {
+                        System.out.println("Lacagta aad gelisay waa ka badan tahay haraaga.");
+                    } else {
+                        paidAmount += partial;
+                        System.out.println("Waxaad bixisay $" + partial + ". Haraaga cusub: $" + (totalBill - paidAmount));
+                    }
+                } else {
+                    System.out.println("PIN-ka waa khaldan.");
+                }
+                break;
+
+            case 0:
+                System.out.println("Waad baxday, mahadsanid!");
+                break;
+
+
+        }
+
+    }
+}
